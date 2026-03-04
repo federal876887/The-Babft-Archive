@@ -11,7 +11,7 @@
     Added inputs and fixed some stuff, better Organization, and more!
 --]]
 
-print("v2.1.3")
+print("v2.1.4")
 
 repeat wait() until game:GetService("Players").LocalPlayer
 if game:GetService("CoreGui"):FindFirstChild("imgui2") then
@@ -3559,60 +3559,11 @@ local library library = {
                     end
 
                     function self.separator(separatorOptions)
-                        local sepSelf = {}
-
-                        separatorOptions = settings.new({
-                            color = Color3.fromRGB(59, 59, 68),
-                            thickness = 1,
-                            padding = 8,
-                        }).handle(separatorOptions)
-
-                        local container = Instance.new("Frame")
-                        container.Parent = folderItems
-                        container.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-                        container.BackgroundTransparency = 1
-                        container.BorderSizePixel = 0
-                        container.Size = UDim2.new(1, 0, 0, separatorOptions.padding * 2 + separatorOptions.thickness)
-
-                        local separator = Instance.new("Frame")
-                        separator.Parent = container
-                        separator.BackgroundColor3 = separatorOptions.color
-                        separator.BorderSizePixel = 0
-                        separator.Size = UDim2.new(1, -20, 0, separatorOptions.thickness)
-                        separator.Position = UDim2.new(0, 10, 0, separatorOptions.padding)
-
-                        function sepSelf:setColor(color)
-                            separator.BackgroundColor3 = color
-                        end
-
-                        function sepSelf:Destroy()
-                            container:Destroy()
-                        end
-
-                        sepSelf.self = container
-                        sepSelf.instance = container
-                        return sepSelf
+                        return self.new("separator", separatorOptions)
                     end
 
                     function self.spacer(spacerOptions)
-                        local spacerSelf = {}
-
-                        spacerOptions = settings.new({
-                            size = 10
-                        }).handle(spacerOptions)
-
-                        local spacer = Instance.new("Frame")
-                        spacer.Parent = folderItems
-                        spacer.BackgroundTransparency = 1
-                        spacer.Size = UDim2.new(1, 0, 0, spacerOptions.size)
-
-                        function spacerSelf:Destroy()
-                            spacer:Destroy()
-                        end
-
-                        spacerSelf.self = spacer
-                        spacerSelf.instance = spacer
-                        return spacerSelf
+                        return self.new("spacer", spacerOptions)
                     end
 
                     self.close()
