@@ -11,7 +11,7 @@
     Added inputs and fixed some stuff, better Organization, and more!
 --]]
 
-print("v2.1.8")
+print("v2.1")
 
 repeat wait() until game:GetService("Players").LocalPlayer
 if game:GetService("CoreGui"):FindFirstChild("imgui2") then
@@ -3573,7 +3573,7 @@ local library library = {
                         folder:Destroy()
                     end
 
-                    function self.separator(separatorOptions)
+                    function self:separator(separatorOptions)
                         local sepSelf = {}
 
                         separatorOptions = settings.new({
@@ -3608,7 +3608,7 @@ local library library = {
                         return sepSelf
                     end
 
-                    function self.spacer(spacerOptions)
+                    function self:spacer(spacerOptions)
                         local spacerSelf = {}
 
                         spacerOptions = settings.new({
