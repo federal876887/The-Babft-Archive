@@ -11,7 +11,7 @@
     Added inputs and fixed some stuff, better Organization, and more!
 --]]
 
-print("v2.1.7")
+print("v2.1.8")
 
 repeat wait() until game:GetService("Players").LocalPlayer
 if game:GetService("CoreGui"):FindFirstChild("imgui2") then
@@ -3430,7 +3430,14 @@ local library library = {
                         updateCanvas()
                     end)
 
-                    function self.new(type, typeOptions)
+                    function self.new(type, typeOptions, ...)
+                        local rest = {...}
+                        if type == self then
+                            -- called with colon syntax: (self, type, typeOptions)
+                            type = typeOptions
+                            typeOptions = rest[1]
+                        end
+
                         type = type and tostring(type) or "unknown"
                         assert(typeof(type) == "string", "expected string as #1 argument, got " .. typeof(type))
                         type = type:lower()
@@ -3517,7 +3524,13 @@ local library library = {
                     end)
 
                     local folderCache = { }
-                    function self.new(type, typeOptions)
+                    function self.new(type, typeOptions, ...)
+                        local rest = {...}
+                        if type == self then
+                            type = typeOptions
+                            typeOptions = rest[1]
+                        end
+
                         type = type and tostring(type) or "unknown"
                         assert(typeof(type) == "string", "expected string as #1 argument, got " .. typeof(type))
                         type = type:lower()
@@ -3625,7 +3638,13 @@ local library library = {
                 end
             end
 
-            function self.new(type, typeOptions)
+            function self.new(type, typeOptions, ...)
+                local rest = {...}
+                if type == self then
+                    type = typeOptions
+                    typeOptions = rest[1]
+                end
+
                 type = type and tostring(type) or "unknown"
                 assert(typeof(type) == "string", "expected string as #1 argument, got " .. typeof(type))
                 type = type:lower()
