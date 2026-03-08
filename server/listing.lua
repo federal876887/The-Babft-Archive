@@ -266,14 +266,19 @@ local NAME_ALIASES = {
     ["BoatMotorUltra"] = "Ultra Boat Motor",
     ["LightBulb"] = "Light Bulb",
     ["ParachuteBlock"] = "Parachute Block",
+    ["SticksOfTNT"] = "Dynamite",
     ["MusicNote"] = "Music Note",
     ["Bread"] = "Baskets Brain",
     ["UltraJetpack"] = "Ultra Jetpack",
+    ["JetPack"] = "Jet Pack",
     ["MysteryBox"] = "Mystery Box",
     ["FrontWheelCookie"] = "Cookie Front Wheel",
     ["BackWheelCookie"] = "Cookie Back Wheel",
     ["FrontWheelMint"] = "Mint Front Wheel",
-    ["BackWheelMint"] = "Mint Back Wheel"
+    ["BackWheelMint"] = "Mint Back Wheel",
+    ["CannonMount"] = "Mounted Cannon",
+    ["GunMount"] = "Mounted Gun",
+    ["SwordMount"] = "Mounted Sword"
 }
 
 -- Gold Icon http://www.roblox.com/asset/?id=5445578732
