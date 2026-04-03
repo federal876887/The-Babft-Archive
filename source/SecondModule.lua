@@ -1,4 +1,4 @@
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vyrusspcs/weshkyv2/refs/heads/main/server/libtest.lua"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/federal876887/The-Babft-Archive/refs/heads/main/server/libtest.lua"))()
 
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
