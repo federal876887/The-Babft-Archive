@@ -14,8 +14,8 @@
 print("v2.1")
 
 repeat wait() until game:GetService("Players").LocalPlayer
-if game:GetService("CoreGui"):FindFirstChild("imgui2") then
-    game:GetService("CoreGui"):FindFirstChild("imgui2"):Destroy()
+if game:GetService("CoreGui"):FindFirstChild("imgui2_2") then
+    game:GetService("CoreGui"):FindFirstChild("imgui2_2"):Destroy()
 end
 
 local tzu = Enum.Font.GothamBold -- All
@@ -23,7 +23,7 @@ local tzu2 = Enum.Font.GothamBold -- Title
 local tzu3 = Enum.Font.GothamBold  -- Tabs
 
 do -- Load items
-    local imgui2 = Instance.new("ScreenGui")
+    local imgui2_2 = Instance.new("ScreenGui")
     local Presets = Instance.new("Frame")
     local Label = Instance.new("TextLabel")
     local TabButton = Instance.new("TextButton")
@@ -125,12 +125,12 @@ do -- Load items
     local Cache_2 = Instance.new("Frame")
 
     -- ========== Main Container ==========
-    imgui2.Name = "imgui2"
-    imgui2.Parent = game:GetService("CoreGui")
+    imgui2_2.Name = "imgui2_2"
+    imgui2_2.Parent = game:GetService("CoreGui")
 
     -- ========== Presets Frame ==========
     Presets.Name = "Presets"
-    Presets.Parent = imgui2
+    Presets.Parent = imgui2_2
     Presets.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     Presets.Size = UDim2.new(0, 100, 0, 100)
     Presets.Visible = false
@@ -1123,7 +1123,7 @@ do -- Load items
     Text_4.TextXAlignment = Enum.TextXAlignment.Left
 
     Cache_2.Name = "Cache"
-    Cache_2.Parent = imgui2
+    Cache_2.Parent = imgui2_2
     Cache_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     Cache_2.Size = UDim2.new(0, 100, 0, 100)
     Cache_2.Visible = false
@@ -1132,7 +1132,7 @@ end
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
 local CoreGui = game:GetService("CoreGui")
-local ScreenGui = CoreGui:FindFirstChild("imgui2")
+local ScreenGui = CoreGui:FindFirstChild("imgui2_2")
 local Presets = ScreenGui:FindFirstChild("Presets")
 local ScreenGuiCache = ScreenGui:FindFirstChild("Cache")
 
