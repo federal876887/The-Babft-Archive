@@ -1,7 +1,7 @@
 -- maybe controversial, but ehh you can discuss about it.
 -- also credits too: https://rscripts.net/script/auto-join-discord-script-E2ke
 
-local discordInvite = "https://discord.gg/k4fqHYaK5t"
+local discordInvite = "https://discord.gg/QMUcu5H7bY"
 if setclipboard then
 	setclipboard(discordInvite)
 end
